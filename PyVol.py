@@ -20,6 +20,8 @@ def main():
         call(["amixer","-D","pulse","get","Master"])
     elif argv[1][2:]=="mute":
         call(["amixer", "-D", "pulse", "sset", "Master", "0%"])
+    elif argv[1][2:]=="max":
+        call(["amixer","-D","pulse","sset","Master","100%"])
     else:
         print("Invalid Argument!")
 
